@@ -1,0 +1,163 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* 登录部分 */
+.bigbox {
+	width: 500px;
+	height: 650px;
+	box-shadow: 0px 0px 10px #ccc;
+	margin: 30px auto;
+	position: relative;
+}
+
+.dl {
+	width: 500px;
+	height: 100px;
+}
+
+.dlleft {
+	width: 248px;
+	height: 98px;
+	float: left;
+	background: #EDF4F9;
+	text-align: center;
+	line-height: 100px;
+	font-size: 20px;
+	color: #6C6D6D;
+	border-right: 2px solid #D3D6DF;
+	border-bottom: 2px solid #D3D6DF;
+}
+
+.dlleft:hover {
+	cursor: pointer;
+}
+
+.dlright {
+	width: 250px;
+	height: 100px;
+	float: left;
+	text-align: center;
+	line-height: 100px;
+	font-size: 20px;
+	color: #6C6D6D;
+}
+
+/* 账号密码部分 */
+.kuang {
+	width: 400px;
+	height: 50px;
+	border-radius: 5px;
+	margin: 20px 50px;
+}
+
+.kuangkuang {
+	position: relative;
+}
+
+#eyes {
+	position: absolute;
+	top: 37px;
+	right: 60px;
+	cursor: pointer;
+}
+
+
+
+
+
+/* 鼠标移入提示部分 */
+.tsk {
+	width: 109px;
+	height: 20px;
+	margin-left: 50px;
+	position: relative;
+	cursor: pointer;
+}
+
+.tsk input {
+	float: left;
+	margin-top: 5px;
+}
+
+.tsk p {
+	float: left;
+}
+
+.ts {
+	width: 300px;
+	height: 50px;
+	background-color: #FFFDE4;
+	border: 2px solid #DBB976;
+	border-radius: 5px;
+	position: absolute;
+	top: 20px;
+	left: 0px;
+	display: none;
+}
+
+/* 蒙版部分 */
+.mb {
+	width: 1000px;
+	height: 700px;
+	background: rgba(0,0,0,.5);
+	position: absolute;
+	top: 0px;
+	left: -250px;
+	display: none;
+}
+
+.mb p {
+	font-size: 30px;
+	color: white;
+	margin: 50px 50px;
+}
+
+.mb p:hover {
+	cursor: pointer;
+}
+
+/* 轮播部分 */
+
+.biggg {
+	width: 500px;
+	height: 500px;
+	background-color: red;
+}
+
+.lbbox {
+	width: 500px;
+	height: 300px;
+}
+
+.lbbox img{
+	width: 500px;
+	height: 300px;
+}
+
+.smlunbo {
+	width: 500px;
+	height: 200px;
+	background-color: blue;
+}
+
+.imggggg {
+	width: 125px;
+	height: 200px;
+	float: left;
+}
+
+.imggggg img {
+	width: 125px;
+	height: 200px;
+}
+
+
+
+.imggggg:hover {
+	cursor: pointer;
+}
+
+
+

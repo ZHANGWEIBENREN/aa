@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/homework.css" />
+	</head>
+	<body>
+		<div class="bigbox">
+			<div class="dl">
+				<div class="dlleft" onclick="opendenglu()">二维码登录</div>
+				<div class="dlright">邮箱账号登录</div>
+			</div>
+
+			<input class="kuang" id="kuang1" type="text" value="邮箱账号或手机号" />
+			<div class="kuangkuang">
+				<input class="kuang" id="pos" type="password" placeholder="请输入密码" />
+				<img id="eyes" src="img/eyenone.png">
+			</div>
+			<div class="tsk">
+				<input class="chuxian" type="checkbox" />
+				<p>十天内免登录</p>
+				<div class="ts">
+					<p style="color: #DF994B;">为了您的安全,请不要在网吧或公用电脑上使用此功能!</p>
+				</div>
+			</div>
+			<div class="mb" id="gb">
+				<p id="ppppp" onclick="closedenglu()">X</p>
+			</div>
+		
+		<!-- 轮播图部分 -->
+		<div class="biggg">
+			<div class="lbbox">
+				<img class="biglunbotu" src="./img/轮播1.jpg" >
+			</div>
+			
+			<div class="smlunbo">
+				<div class="imggggg" id="img1">
+					<img src="./img/轮播1.jpg" >
+				</div>
+				<div class="imggggg" id="img2">
+					<img src="./img/轮播2.jpg" >
+				</div>
+				<div class="imggggg" id="img3">
+					<img src="./img/轮播3.jpg" >
+				</div>
+				<div class="imggggg" id="img4">
+					<img src="./img/轮播4.jpg" >
+				</div>
+			</div>
+		</div>
+		
+		
+		</div>
+
+
+		<script type="text/javascript">
+			
+			// 轮播图切换
+			    const d1 = document.querySelector('#img1');
+			    const d2 = document.querySelector('#img2');
+			    const d3 = document.querySelector('#img3');
+			    const d4 = document.querySelector('#img4');
+			    const d = document.querySelector('.biglunbotu');
+			    d1.onmouseover = function() {
+			     d.src = 'img/轮播1.jpg';
+			    }
+			    d2.onmouseover = function() {
+			     d.src = 'img/轮播2.jpg';
+			    }
+			    d3.onmouseover = function() {
+			     d.src = 'img/轮播3.jpg';
+			    }
+			    d4.onmouseover = function() {
+			     d.src = 'img/轮播4.jpg';
+			    }
+			
+			
+			
+			
+			let imgs = document.getElementById('eyes');
+			let ann = document.getElementById('pos');
+			let kuangkuang = document.getElementById('kuang1');
+
+			function opendenglu(){
+			   document.getElementById('gb').style.display='block';
+			  };
+			  function closedenglu(){
+			   document.getElementById('gb').style.display='none';
+			  };
+			
+			
+			let flag = 0;
+			// 闭眼睛变睁眼睛
+			eyes.onclick = function() {
+				if (flag == 0) {
+					pos.type = 'text';
+					eyes.src = 'img/eyesee.png';
+					flag = 1;
+				} else {
+					pos.type = 'password';
+					eyes.src = 'img/eyenone.png';
+					flag = 0;
+				}
+			};
+			// 获取焦点
+			kuangkuang.onfocus = function() {
+				if (this.value == "邮箱账号或手机号") {
+					this.value = "";
+				}
+			};
+			kuangkuang.onblur = function() {
+				if (this.value == "") {
+					this.value = "邮箱账号或手机号";
+				}
+			};
+			// 鼠标移入移出事件
+			document.querySelector('.tsk').addEventListener('mouseover', function() {
+				document.querySelector('.ts').style.display = 'block';
+			});
+
+			document.querySelector('.tsk').addEventListener('mouseout', function() {
+				document.querySelector('.ts').style.display = 'none';
+			});
+		</script>
+	</body>
+</html>
