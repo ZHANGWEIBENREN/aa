@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				height: 2000px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>第一题</h1>
+		<button id="box">a与b作比较</button>
+		<hr />
+		<h1>第二题</h1>
+		<button id="box2">判断a是否能被5整除</button>
+		<script>
+			//第一题
+			const box = document.getElementById('box');
+			box.addEventListener('click', bijiao);
+
+			function bijiao() {
+				let a = Number(prompt('请输入a的值'));
+				let b = Number(prompt('请输入b的值'));
+				if (a > b) {
+					alert('a大于b');
+				} else if (a < b) {
+					alert('a小于b');
+				} else {
+					alert('a等于b');
+				}
+				console.log(a);
+			}
+
+			//第二题document.write('<hr/>');
+			const box2 = document.getElementById('box2');
+			box2.addEventListener('click', fuzhi);
+
+			function fuzhi() {
+				let aa = Number(prompt('请给a赋值'));
+				if (aa % 5 == 0) {
+					alert('可以被5整除且结果过为' + aa / 5 + '');
+				} else {
+					alert('不可以被5整除');
+				}
+			}
+			//第三题
+			document.write('<h1>第三题</h1>');
+			let str = '';
+			for (i = 0; i <= 100; i++) {
+				if (i % 2 == 0) {
+					str += i + ' ';
+				}
+			}
+			document.write('100以内的偶数有：' + str + '')
+			document.write('<hr/>');
+			//第四题
+			document.write('<h1>第四题</h1>');
+			let y = 1;
+			let strr = '';
+			while (y <= 100) {
+				if (y % 7 == 0) {
+					strr += y + ' ';
+				}
+				y++;
+			}
+			document.write('100以内7的倍数有：' + strr + '');
+			document.write('<hr/>');
+			//第五题
+			document.write('<h1>第五题</h1>');
+			document.write('<button id="box3">显示最大值</button>');
+			const box3 = document.getElementById('box3');
+			box3.addEventListener('click', list);
+
+			function list() {
+				let aaa = Number(prompt('请输入a的值'));
+				let bbb = Number(prompt('请输入b的值'));
+				let ccc = Number(prompt('请输入c的值'));
+				if (aaa > bbb && aaa > ccc) {
+					alert('a,b,c中' + aaa + '最大');
+				} else if (bbb > aaa && bbb > ccc) {
+					alert('a,b,c中' + bbb + '最大');
+				} else if (ccc > aaa && ccc > bbb) {
+
+				}
+				alert('a,b,c中' + ccc + '最大');
+			}
+			document.write('<hr/>');
+			//第六题
+			document.write('<h1>第六题</h1>');
+			let o = '';
+			let j = '';
+			for (i = 0; i <= 100; i++) {
+				if (i % 2 == 0) {
+					o += i + ' ';
+				} else {
+					j += i + ' ';
+				}
+			}
+			document.write('100以内偶数有' + o + '</br>' + '奇数有' + j + '');
+			document.write('<hr/>');
+			//第七题
+			document.write('<h1>第七题</h1>');
+			document.write('<button id="box4">求数组的和</button>');
+			const box4 = document.getElementById('box4');
+			box4.addEventListener('click', max);
+			function max() {
+				let test = prompt('请输入数组');
+				let newshuzu = test.split(',');
+				console.log(newshuzu);
+				let summm = 0;
+				for (h = 0; h <= newshuzu.length - 1; h++) {
+					summm +=Number(newshuzu[h]);
+				}
+				document.write('输入的数组之和为'+summm+'');
+			}
+			document.write('<hr/>');
+			//第八题
+			document.write('<input type="text" id="input1"><br/>');
+			document.write('<input type="text" id="input2">');
+			document.write('<button id="box6">你俩打一架</button><br/>');
+			const box6 =document.getElementById('box6');
+			const input1 =document.getElementById('input1');
+			const input2 =document.getElementById('input2');
+			box6.addEventListener('click',dayijia);
+			function dayijia(){
+				if(isNaN(input1.value)||isNaN(input2.value)){
+					alert('请输入数字');
+				}else{if(input1.value>input2.value){
+					alert('a的数值大');
+				}
+				else if(input2.value>input1.value){
+					alert('b的数值大');
+				}
+				else{
+					alert('俩值相等');
+				}
+				}
+			}
+		</script>
+	</body>
+</html>
